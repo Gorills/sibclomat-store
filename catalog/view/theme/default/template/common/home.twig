@@ -1,0 +1,61 @@
+{{ header }}
+<div class="start-custom">
+  <div class="container-custom">
+    <div class="start-custom__inner">
+        <h1 class="start-custom__title">Скидка 50% на установку кондиционеров Electrolux</h1>
+        <p class="start-custom__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ipsum tempore? Adipisci aliquid autem blanditiis corporis cumque dolor dolore dolorum ducimus id in minus modi nemo nesciunt rem, repellendus veniam!</p>
+        <a href="https://sibclimat70.ru/index.php?route=blog/article&blog_category_id=70&article_id=126" class="start-custom__btn">Подробнее</a>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="categories-custom">
+    <div class="container-custom">
+        <div class="categories-custom__inner">
+
+
+            <a href="/kondicionery" class="categories-custom__item">
+                <p class="categories-custom__text">Кондиционеры</p>
+
+                <img src="/image/kond.jpg" alt="" class="categories-custom__img">
+            </a>
+            <a href="/ventilyaciya" class="categories-custom__item">
+                <p class="categories-custom__text">Вентиляция</p>
+
+                <img src="image/category/vent.jpg" alt="" class="categories-custom__img">
+            </a>
+            <a href="/teplovye-sistemy" class="categories-custom__item">
+                <p class="categories-custom__text">Тепловые системы</p>
+
+                <img src="image/category/tepl.png" alt="" class="categories-custom__img">
+            </a>
+            <a href="/klimaticheskaya-tekhnika" class="categories-custom__item">
+                <p class="categories-custom__text">Климатическая техника</p>
+
+                <img src="image/category/uvl.jpg" alt="" class="categories-custom__img">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="common-home" class="container">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}
